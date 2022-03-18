@@ -1,5 +1,5 @@
 <?php
-# Konek ke Web Server Lokal
+# Koneksi ke Web Server Lokal
 $myHost  = "localhost";
 $myUser  = "root";
 $myPass  = "";
@@ -12,7 +12,7 @@ if (!$koneksidb) {
 }
 
 # Memilih database pd MySQL Server
-// mysql_select_db($myDbs) or die("Database not Found !");
+// mysqli_select_db($myDbs) or die("Database not Found !");
 
 # Menampilkan data toko
 // $toko = mysqli_query($koneksidb, "SELECT * FROM toko WHERE id=1");
@@ -20,4 +20,5 @@ if (!$koneksidb) {
 $toko = $koneksidb->query("SELECT * FROM toko WHERE id=1");
 $ambil = $toko->fetch_assoc();
 
+# Mengambil kode faktur yang berada di database
 $faktur = $ambil['kode_faktur'];
