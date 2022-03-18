@@ -1,4 +1,5 @@
 <?php
+
 # Koneksi ke Web Server Lokal
 $myHost  = "localhost";
 $myUser  = "root";
@@ -22,3 +23,5 @@ $ambil = $toko->fetch_assoc();
 
 # Mengambil kode faktur yang berada di database
 $faktur = $ambil['kode_faktur'];
+
+?>
